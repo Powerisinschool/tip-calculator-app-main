@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logodiv">
+    <img src="./images/logo.svg" alt="SPLITTER" class="logo">
+  </div>
+
+  <form class="content">
+    <div class="bigger-left">
+      <label for="bill">
+        Bill
+      </label>
+      <div class="form-control">
+        <span class="input-leading">
+          <img src="./images/icon-dollar.svg" alt="$">
+        </span>
+        <input type="number" id="bill" placeholder="0" />
+      </div>
+      <br />
+
+      <span class="label">
+        Select Tip %
+      </span>
+
+      <div class="tips">
+        <span class="input-choice active">5%</span>
+        <span class="input-choice">10%</span>
+        <span class="input-choice">15%</span>
+        <span class="input-choice">25%</span>
+        <span class="input-choice">50%</span>
+        <div class="tips-control">
+          <input type="number" placeholder="Custom" aria-valuemax="90" id="custom-tip" />
+        </div>
+      </div>
+      <br />
+
+      <label for="num-people">
+        Number of People
+      </label>
+      <div class="form-control">
+        <span class="input-leading">
+          <img src="./images/icon-person.svg" alt="P">
+        </span>
+        <input type="number" id="num-people" placeholder="0" required />
+      </div>
+      <br />
+    </div>
+    <div class="card">
+      <div class="colcon">
+        <div class="col-2">
+          <div class="col">
+            <div class="title">Tip Amount</div>
+            <div class="subtitle">/ person</div>
+          </div>
+          <div class="totalcon">
+            <span id="person-tip">
+              0.00
+            </span>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="col">
+            <div class="title">Total</div>
+            <div class="subtitle">/ person</div>
+          </div>
+          <div class="totalcon">
+            <span id="total-tip">
+              0.00
+            </span>
+          </div>
+        </div>
+      </div>
+      <button class="reset-btn" type="reset">Reset</button>
+    </div>
+  </form>
+  <script src="./script.js"></script>
+</body>
+
+</html>
